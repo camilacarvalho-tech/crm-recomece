@@ -2,7 +2,7 @@ import { Outlet, Link, useLocation } from "react-router-dom";
 import { LayoutDashboard, Users, UserPlus, Settings, TrendingUp, Menu, X, Calendar } from "lucide-react";
 import { useState } from "react";
 
-export function Layout() {
+export default function Layout() {
   const location = useLocation();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -71,7 +71,7 @@ export function Layout() {
           })}
         </nav>
 
-        {/* User Info at bottom */}
+        {/* User Info */}
         <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-800">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
@@ -85,17 +85,17 @@ export function Layout() {
         </div>
       </aside>
 
-      {/* Main Content */}
+      {/* Conteúdo */}
       <main className="lg:ml-64 pt-16 min-h-screen">
         <Outlet />
       </main>
 
-      {/* Overlay for mobile */}
+      {/* Overlay mobile */}
       {isSidebarOpen && (
         <div
           className="fixed inset-0 bg-black/50 z-30 lg:hidden"
           onClick={() => setIsSidebarOpen(false)}
-        ></div>
+        />
       )}
     </div>
   );
