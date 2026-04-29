@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   # CRM para gerenciamento de usuários
 
@@ -9,3 +10,6 @@
 
   Run `npm run dev` to start the development server.
   
+=======
+# crm-recomece
+>>>>>>> 4a88b47ac8463c67c8179404365b062d37c4a5e7
