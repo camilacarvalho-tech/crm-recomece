@@ -7,16 +7,33 @@ import SistemaInterno from "./pages/SistemaInterno";
 import Conversao from "./pages/Conversao";
 import Layout from "./components/Layout";
 
-export const router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
     children: [
-      { index: true, element: <Dashboard /> },
-      { path: "leads", element: <Leads /> },
-      { path: "clientes", element: <Clientes /> },
-      { path: "sistema-interno", element: <SistemaInterno /> },
-      { path: "conversao", element: <Conversao /> },
+      {
+        path: "/",
+        element: <Dashboard />,
+      },
+      {
+        path: "/leads",
+        element: <Leads />,
+      },
+      {
+        path: "/clientes",
+        element: <Clientes />,
+      },
+      {
+        path: "/sistema-interno",
+        element: <SistemaInterno />,
+      },
+      {
+        path: "/conversao",
+        element: <Conversao />,
+      },
     ],
   },
 ]);
+
+export default router;
