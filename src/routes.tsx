@@ -1,11 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "./components/Layout";
 
-import Dashboard from "./pages/Dashboard";
-import Clientes from "./pages/Clientes";
-import Leads from "./pages/Leads";
-import SistemaInterno from "./pages/SistemaInterno";
-import Conversao from "./pages/Conversao";
+import Layout from "./app/components/Layout";
+
+import Dashboard from "./app/pages/Dashboard";
+import Clientes from "./app/pages/Clientes";
+import Leads from "./app/pages/Leads";
+import SistemaInterno from "./app/pages/SistemaInterno";
+import Conversao from "./app/pages/Conversao";
 
 export const router = createBrowserRouter([
   {
